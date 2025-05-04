@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyzz Official ID</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      overflow-y: auto;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      z-index: -2;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 20px 100px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .socials {
+      margin-top: 30px;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 40px;
+      transition: transform 0.3s ease-in-out, color 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+      color: #2575fc;
+    }
+
+    .description {
+      margin-top: 40px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+    }
+
+    .description p {
+      line-height: 1.6;
+    }
+
+    /* Tombol Toggle */
+    .toggle-button {
+      background-color: #ffffff;
+      color: #2575fc;
+      font-size: 18px;
+      padding: 10px 25px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .toggle-button:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Bagian toggle tanpa transparansi hitam dan blur */
+    .toggle-section {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background: transparent;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .toggle-section.active {
+      max-height: 2000px;
+      opacity: 1;
+    }
+
+    .catalog {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-card {
+      width: 250px;
+      height: 320px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .product-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2575fc;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #128C7E;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+      .product-card {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .socials a {
+        font-size: 30px;
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div id="particles-js"></div>
+  <div class="content">
+    <img src="https://files.catbox.moe/mwmy0y.jpg" alt="Foto Profil" class="profile-pic">
+    <h1>Hallo Saya Kyzz Official ID</h1>
+    <div class="socials">
+      <a href="https://www.youtube.com/@KyzzPediaa" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com/@kyzzysukacc" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://discord.com/invite/jka661hs" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://instagram.com/kyzzrikz_" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="description">
+      <p>Hallo Saya Kyzz Official ID pembuat bot, pengembang web, dan pencinta teknologi. Selamat datang di halaman profil saya. jangan lupa ikutin saluran Kyzz Official ID, Terimakasih 😙</p>
+    </div>
+
+    <!-- Tombol Toggle untuk pindah antara produk dan grup/saluran -->
+    <button onclick="toggleSections()" class="toggle-button" id="toggle-button">📢 Grup & Saluran</button>
+    
+    <div id="about-info" class="toggle-section">
+      <ul style="list-style: none; padding: 0; margin-top: 15px;">
+        <li><a href="https://chat.whatsapp.com/GbSOw18k6IhB4sc6Fhty0r" target="_blank" class="whatsapp-button">Grup WhatsApp</a></li>
+        <li><a href="https://whatsapp.com/channel/0029Vb3qE78BadmWhAfscZ3I" target="_blank" class="whatsapp-button" style="background-color:#0088cc;">Saluran WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div id="product-list" class="toggle-section">
+      <div class="catalog">
+        <!-- Alight Motion -->
+        <div class="product-card">
+          <img src="https://files.catbox.moe/b0dxd1.png" alt="Alight Motion">
+          <h3>Alight Motion</h3>
+          <p>Alight Motion 1 Tahun</p>
+          <div class="price">Rp 10.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Alight%20Motion%201%20Tahun" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- CapCut -->
+        <div class="product-card">
+          <img src="https://files.catbox.moe/p9xwll.webp" alt="CapCut">
+          <h3>CapCut</h3>
+          <p>CapCut Sharing 5U</p>
+          <div class="price">Rp 15.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20CapCut%20Sharing%205U" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- Canva -->
+        <div class="product-card">
+          <img src="https://files.catbox.moe/3tx9ya.png" alt="Canva">
+          <h3>Canva</h3>
+          <p>Canva Lifetime</p>
+          <div class="price">Rp 8.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Canva%20Lifetime" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- Adobe Photoshop -->
+        <div class="product-card">
+          <img src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Photoshop-Logo-2013-2015.png" alt="Adobe Photoshop">
+          <h3>Adobe Photoshop</h3>
+          <p>Adobe Photoshop 1 Tahun</p>
+          <div class="price">Rp 50.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Adobe%20Photoshop%201%20Tahun" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- Spotify Premium -->
+        <div class="product-card">
+          <img src="https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png" alt="Spotify Premium">
+          <h3>Spotify Premium</h3>
+          <p>Spotify Premium 1 Bulan</p>
+          <div class="price">Rp 20.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Spotify%20Premium%201%20Bulan" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- NordVPN -->
+        <div class="product-card">
+          <img src="https://1000logos.net/wp-content/uploads/2022/08/NordVPN-Emblem-768x432.png" alt="NordVPN">
+          <h3>NordVPN</h3>
+          <p>NordVPN 1 Tahun</p>
+          <div class="price">Rp 80.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20NordVPN%201%20Tahun" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- ChatGPT Premium -->
+        <div class="product-card">
+          <img src="https://static.vecteezy.com/system/resources/previews/010/265/390/non_2x/cute-3d-robot-say-hello-png.png" alt="ChatGPT Premium">
+          <h3>ChatGPT Premium</h3>
+          <p>ChatGPT Plus (GPT-4) 1 Bulan</p>
+          <div class="price">Rp 35.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20ChatGPT%20Plus%201%20Bulan" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- Adobe Premiere Pro -->
+        <div class="product-card">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/adobe-premiere-pro-3d-icon-download-in-png-blend-fbx-gltf-file-formats--technology-logo-company-tool-suit-creative-software-app-pack-appliances-icons-8412270.png" alt="Adobe Premiere Pro">
+          <h3>Premiere Pro</h3>
+          <p>Premiere Pro 1 Tahun</p>
+          <div class="price">Rp 55.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Premiere%20Pro%201%20Tahun" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- Netflix Premium -->
+        <div class="product-card">
+          <img src="https://static.vecteezy.com/system/resources/previews/023/626/601/original/netflix-transparent-netflix-free-free-png.png" alt="Netflix Premium">
+          <h3>Netflix Premium</h3>
+          <p>Netflix 1 Bulan (Private)</p>
+          <div class="price">Rp 40.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Netflix%201%20Bulan%20Private" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+
+        <!-- Disney+ Hotstar -->
+        <div class="product-card">
+          <img src="https://static.vecteezy.com/system/resources/previews/048/041/282/non_2x/disney-plus-hotstar-app-icon-free-png.png" alt="Disney+ Hotstar">
+          <h3>Disney+ Hotstar</h3>
+          <p>Disney+ Hotstar 1 Tahun</p>
+          <div class="price">Rp 30.000</div>
+          <a href="https://wa.me/6283170213967?text=Saya%20tertarik%20untuk%20memesan%20Disney%2B%20Hotstar%201%20Tahun" class="whatsapp-button" target="_blank">Pesan via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          }
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
+    });
+
+    function toggleSections() {
+      const aboutInfo = document.getElementById('about-info');
+      const productList = document.getElementById('product-list');
+      const button = document.getElementById('toggle-button');
+
+      if (aboutInfo.classList.contains('active')) {
+        aboutInfo.classList.remove('active');
+        productList.classList.add('active');
+        button.innerText = '📢 Grup & Saluran';
+      } else {
+        aboutInfo.classList.add('active');
+        productList.classList.remove('active');
+        button.innerText = '📦 Daftar Produk';
+      }
+    }
+  </script>
+</body>
+</html>
